@@ -257,7 +257,7 @@ class MambaLMHeadModel(nn.Module, GenerationMixin):
     @classmethod
     def from_pretrained(cls, pretrained_model_name, device=None, dtype=None, **kwargs):
         config_data = load_config_hf(pretrained_model_name)
-        config = MambaConfig(**config_data)
+        config = MambaConfig(**{k:v for k, v in config_data.items() if k not in ('_name_or_path', 'architectures',)})
         model = cls(config, device=device, dtype=dtype, **kwargs)
         model.load_state_dict(load_state_dict_hf(pretrained_model_name, device=device, dtype=dtype))
         return model
