@@ -12,6 +12,13 @@ import torch
 import torch.nn as nn
 from torch.nn import CrossEntropyLoss
 
+# refer to local mamba_ssm instead of based mamba_ssm.
+import sys
+#sys.path.insert(0, '/path/to/local/mamba-ssm')
+sys.path.insert(0, '/mnt/fast/nobackup/users/nt00601/mamba-finetune/mamba_ssm')
+
+# Now you can import mamba-ssm, and Python will use the version found in the specified directory
+import mamba_ssm
 from mamba_ssm.models.config_mamba import MambaConfig
 from mamba_ssm.modules.mamba_simple import Mamba, Block
 from mamba_ssm.utils.generation import GenerationMixin
