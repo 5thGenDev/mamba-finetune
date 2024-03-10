@@ -6,3 +6,5 @@ Koziev is the unsung hero here: https://github.com/state-spaces/mamba/pull/83
 mamba/mamba_ssm/models/mixer_seq_simple.py and mamba/mamba_ssm/models/config_mamba.py is changed.
 - Make MambaLMHeadModel input labels and return loss as a first element from forward like HuggingFace Transformer. mamba/mamba_ssm/models/mixer_seq_simple.py is changed.
 Remember these 3 files so that whenever these 3 classes are imported to another file, we need to change import lines to refer to these 3 files.
+
+Also we need to refer to local mamba_ssm instead of installed mamba. This way we can still inherit pre-built wheel from based mamba package - really important because it includes nvcc which you can't run at all without it.
