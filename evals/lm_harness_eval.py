@@ -3,6 +3,10 @@ import torch
 import transformers
 from transformers import AutoTokenizer
 
+# refer to local mamba_ssm instead of based mamba_ssm.
+import sys
+#sys.path.insert(0, '/path/to/local/mamba-ssm')
+sys.path.insert(0, '/mnt/fast/nobackup/users/nt00601/mamba-finetune/mamba_ssm')
 from mamba_ssm.models.mixer_seq_simple import MambaLMHeadModel
 
 from lm_eval.api.model import LM
