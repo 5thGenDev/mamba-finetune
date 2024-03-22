@@ -1,6 +1,6 @@
 ### Installation
 1.  Type <nvcc --version> to check if you have nvidia-cuda-toolkit. If you don't might, consider using docker image = nvidia/cuda:12.2.x-devel-ubuntu22.04 depending on your cuda version
-2.  Check hyperlinks for mamba_ssm package and causal_conv1d package and install the wheel files package according to the cuda, Python, Pytorch versions you have in your conda environment (should be handbook env if you follow alignment-handbook instructions), then cd <> to where the files are installed, then <pip install .whl> those files.
+2.  Check hyperlinks for mamba_ssm package and causal_conv1d package and install the wheel files package according to the cuda, Python, Pytorch versions you have in your conda environment (should be handbook env if you follow alignment-handbook instructions), then <cd ./path/to/installed files> to where the files are installed, then <pip install .whl> those files.
 
 ### All changes include
 Koziev is the unsung hero here: https://github.com/state-spaces/mamba/pull/83
